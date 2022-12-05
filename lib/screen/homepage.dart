@@ -4,12 +4,19 @@ class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: const Center(
-        child: Text(
-          'Home Page',
-          style: TextStyle(fontFamily: 'Courgette', fontSize: 50),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'Chat App',
+            style: TextStyle(fontFamily: 'Courgette'),
+          ),
+        ),
+        body: const Center(
+          child: Text(
+            'Home Page',
+            style: TextStyle(fontFamily: 'Courgette', fontSize: 50),
+          ),
         ),
       ),
     );

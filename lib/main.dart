@@ -1,6 +1,5 @@
 import 'package:chatapp/firebase_options.dart';
 import 'package:chatapp/screen/completeProfile.dart';
-import 'package:chatapp/screen/homepage.dart';
 import 'package:chatapp/screen/loginPage.dart';
 import 'package:chatapp/screen/signUp.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,11 +9,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MaterialApp(
-    title: 'Flutter Demo',
+    title: 'Chat App',
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: LoginPage(),
+    home: const LoginPage(),
   ));
 }
